@@ -29,6 +29,7 @@ public class PlayerStats : MonoBehaviour
     {
         public int level;
         public float experience;
+        public float experienceToLevelUp;
         public float movementSpeed;
         public float movementSpeedMultiplier;
         public float lootRange;
@@ -40,6 +41,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private GeneralStats generalStats;
     [SerializeField] private AttackStats attackStats;
 
+    [SerializeField] private GameObject UpgradeCanvas;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -69,10 +71,24 @@ public class PlayerStats : MonoBehaviour
     
     public void AddExperience(float amount)
     {
-        generalStats.experience += amount;
+        generalStats.experience += amount* (1+generalStats.experienceMultiplier);
     }
     public void AddLevel()
     {
         generalStats.level++;
+    }
+    public void SetExpToUp(float xpNeeded)
+    {
+        generalStats.experienceToLevelUp = xpNeeded;
+    }
+    public int GetLevel()
+    {
+        return generalStats.level;
+    }
+
+    public void GetUpgrade()
+    {
+        UpgradeCanvas.SetActive(true);
+        GameState.Instance.gameState = GameState.State.Pause;
     }
 }

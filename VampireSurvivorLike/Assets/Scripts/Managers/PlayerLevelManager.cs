@@ -18,7 +18,7 @@ public class PlayerLevelManager : MonoBehaviour
             if (i == 0)
             {
                 experienceNeededByLevel[i] = baseExperienceNeeded;
-                baseExperienceNeeded = experienceToLevelUp;
+                experienceToLevelUp = baseExperienceNeeded;
             }
             if(i > 0)
             {
@@ -31,6 +31,7 @@ public class PlayerLevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerStats.Instance.SetExpToUp(experienceNeededByLevel[PlayerStats.Instance.GetLevel()]);
         if(PlayerStats.Instance.GetGeneralStats().experience > experienceNeededByLevel[nextLevel-2])
         {
             nextLevel++;

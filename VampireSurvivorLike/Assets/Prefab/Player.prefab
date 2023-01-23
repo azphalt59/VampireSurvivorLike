@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4608040367109268228}
   - component: {fileID: 4608040367109268231}
   - component: {fileID: 5920081353881104331}
+  - component: {fileID: 3267797946293128711}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -113,7 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d45b3cbe7e9a748a277c94a44842c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0
 --- !u!114 &4608040367109268231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +135,7 @@ MonoBehaviour:
   generalStats:
     level: 0
     experience: 0
+    experienceToLevelUp: 0
     movementSpeed: 5
     movementSpeedMultiplier: 0
     lootRange: 5
@@ -163,3 +164,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &3267797946293128711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608040367109268230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aea8708d0c408a46ba5e33810b83fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackMoves: []

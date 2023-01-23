@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    private float movementSpeed;
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        if(GameState.Instance.gameState == GameState.State.Play)
+        {
+            Movement();
+        }
+        
     }
 
     private void Movement()
