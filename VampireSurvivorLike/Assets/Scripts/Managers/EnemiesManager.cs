@@ -7,10 +7,12 @@ public class EnemiesManager : MonoBehaviour
     public static EnemiesManager Instance;
     public List<GameObject> enemies;
     private List<float> enemiesDistance;
-    [SerializeField] private GameObject nearestEnemy;
+    [SerializeField] public GameObject nearestEnemy;
     public GameObject Player;
     private float nearestDistance = float.MaxValue;
     private float timer = 0;
+    public float EnemySpeed = 5f;
+    public int EnemyDamage = 15;
 
     private void Awake()
     {

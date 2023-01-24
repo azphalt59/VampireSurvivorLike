@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4608040367109268231}
   - component: {fileID: 5920081353881104331}
   - component: {fileID: 3267797946293128711}
+  - component: {fileID: 330938611879011154}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -148,6 +149,7 @@ MonoBehaviour:
     criticalChance: 5
     criticalDamage: 50
     additionalProjectile: 0
+  UpgradeCanvas: {fileID: 0}
 --- !u!54 &5920081353881104331
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -177,3 +179,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackMoves: []
+  target: {fileID: 0}
+--- !u!114 &330938611879011154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608040367109268230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801d9fdedeb5fcb42aecd34c8dfc6365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: []
+  nearestEnemy: {fileID: 0}
+  Player: {fileID: 0}
+  EnemySpeed: 5
+  EnemyDamage: 15

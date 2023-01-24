@@ -85,7 +85,18 @@ public class PlayerStats : MonoBehaviour
     {
         return generalStats.level;
     }
-
+    public void TakeDamage(int damageAmount)
+    {
+        healthStats.Health -= damageAmount;
+        CheckLife();
+    }
+    public void CheckLife()
+    {
+        if(healthStats.Health <= 0)
+        {
+            Debug.Log("Mort");
+        }
+    }
     public void GetUpgrade()
     {
         UpgradeCanvas.SetActive(true);
